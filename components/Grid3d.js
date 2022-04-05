@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState , Suspense} from "react";
-import { Canvas, useFrame , useLoader } from "@react-three/fiber";
+import { Canvas, useFrame , useLoader, useThree } from "@react-three/fiber";
 import Controls from "./Controls"
 import * as THREE from "three";
 import styles from "../styles/Components/Grid3d.module.css";
@@ -16,13 +16,13 @@ export default function Grid3d(props) {
         return degrees*3.14/180;
     }
 
-
+   
     return (
         <div
             className={styles.box}
         >
             <Canvas camera={{
-                position: [ 0, 400, 0],
+                position: [ 0, 0, 400],
             }}>
 
                 <Sol
